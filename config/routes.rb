@@ -17,8 +17,7 @@ Rails.application.routes.draw do
 	resources :static_patterns do 
 	end
 
-  resources :commands do 
-  end
+  resources :commands, :only => [:index, :new, :create]
 
 	root 'cord/cords#index'
 
